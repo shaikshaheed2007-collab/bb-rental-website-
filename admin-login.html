@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BB RENTALS | Admin Login</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main class="login-page">
+        <section class="login-left">
+            <div class="login-logo">
+                <a href="index.html">BB <span>RENTALS</span></a>
+            </div>
+            <a href="index.html" class="back-home">← Back to Home</a>
+            <div class="login-left-content">
+                <p class="small-title">ADMINISTRATION</p>
+                <h1>Manage Your<br>Rental Business.</h1>
+                <p class="left-description">
+                    Sign in to view rental activity and daily revenue.
+                </p>
+            </div>
+        </section>
+
+        <section class="login-right">
+            <div class="login-form-container">
+                <div class="login-heading">
+                    <p class="welcome-text">ADMINISTRATOR ACCESS</p>
+                    <h2>Admin sign in</h2>
+                    <p>Use your administrator credentials to continue.</p>
+                </div>
+
+                <form onsubmit="loginAdmin(event)">
+                    <div class="form-group">
+                        <label for="admin-login-email">Administrator email</label>
+                        <input
+                            type="email"
+                            id="admin-login-email"
+                            name="email"
+                            placeholder="Enter administrator email"
+                            autocomplete="username"
+                            required
+                        >
+                    </div>
+                    <div class="form-group">
+                        <label for="admin-login-password">Password</label>
+                        <input
+                            type="password"
+                            id="admin-login-password"
+                            name="password"
+                            placeholder="Enter administrator password"
+                            autocomplete="current-password"
+                            required
+                        >
+                    </div>
+                    <button class="login-button" type="submit">Admin Login →</button>
+                </form>
+
+                <p class="create-account-text">
+                    Customer?
+                    <a href="login.html">Customer Login</a>
+                </p>
+            </div>
+        </section>
+    </main>
+    <script src="script.js"></script>
+</body>
+</html>

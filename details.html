@@ -27,6 +27,7 @@
             <a href="index.html">Home</a>
             <a href="cars.html">Cars</a>
             <a href="about.html">About</a>
+            <a href="payments.html">My Payments</a>
             <a href="index.html#contact">Contact</a>
 
         </nav>
@@ -1011,5 +1012,52 @@
 
 </footer>
 
+<dialog class="rental-dialog" id="rental-booking-dialog" aria-labelledby="booking-dialog-title">
+    <form id="rental-booking-form">
+        <p class="eyebrow">BB RENTALS BOOKING</p>
+        <h2 id="booking-dialog-title">Confirm your rental</h2>
+        <p class="rental-dialog-car" id="booking-car-name"></p>
+        <p class="rental-dialog-rate" id="booking-daily-rate"></p>
+
+        <div class="rental-date-fields">
+            <div class="booking-item">
+                <label for="booking-pickup-date">Pick-up date</label>
+                <input id="booking-pickup-date" type="date" required>
+            </div>
+            <div class="booking-item">
+                <label for="booking-return-date">Return date</label>
+                <input id="booking-return-date" type="date" required>
+            </div>
+        </div>
+
+        <p class="rental-dialog-total">
+            Estimated total: <strong id="booking-total"></strong>
+        </p>
+        <section class="rental-payment-section" aria-labelledby="payment-section-title">
+            <p class="eyebrow">PAYMENT</p>
+            <h3 id="payment-section-title">Payment details</h3>
+            <div class="booking-item">
+                <label for="booking-payment-method">Payment method</label>
+                <select id="booking-payment-method" required>
+                    <option value="Cash at pickup">Cash at pickup</option>
+                    <option value="UPI at pickup">UPI at pickup</option>
+                </select>
+            </div>
+            <p class="rental-payment-note">
+                Payment is not processed online. The amount is due when you pick up the car.
+            </p>
+        </section>
+        <p class="rental-dialog-error" id="booking-error" role="alert"></p>
+
+        <div class="rental-dialog-actions">
+            <button class="secondary-btn" type="button" onclick="document.getElementById('rental-booking-dialog').close()">
+                Cancel
+            </button>
+            <button class="primary-btn" type="submit">Confirm rental</button>
+        </div>
+    </form>
+</dialog>
+
+<script src="script.js"></script>
 </body>
 </html>

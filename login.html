@@ -4,46 +4,59 @@
 <head>
 
     <meta charset="UTF-8">
+
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>BB RENTALS - Login</title>
 
     <link rel="stylesheet" href="style.css">
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet">
-
 </head>
 
-<body>
 
+<body>
 
 <div class="login-page">
 
 
-    <!-- LEFT SIDE -->
+    <!-- =====================================
+         LEFT SIDE
+    ====================================== -->
 
     <div class="login-left">
 
-        <a href="index.html" class="login-logo">
-            BB <span>RENTALS</span>
+
+        <!-- LOGO -->
+
+        <div class="login-logo">
+
+            <a href="index.html">
+                BB <span>RENTALS</span>
+            </a>
+
+        </div>
+
+
+        <!-- BACK TO HOME -->
+
+        <a href="index.html" class="back-home">
+            ← Back to Home
         </a>
+
+
+        <!-- LEFT CONTENT -->
 
         <div class="login-left-content">
 
-            <p class="eyebrow">
+            <p class="small-title">
                 PREMIUM CAR RENTALS
             </p>
-
             <h1>
-                Your Journey
-                <br>
+                Your Journey<br>
                 Starts Here.
             </h1>
 
-            <p>
+            <p class="left-description">
                 Sign in to continue your premium
                 driving experience.
             </p>
@@ -53,98 +66,120 @@
     </div>
 
 
-    <!-- RIGHT SIDE -->
+
+    <!-- =====================================
+         RIGHT SIDE
+    ====================================== -->
 
     <div class="login-right">
-
-        <a href="index.html" class="back-home">
-            ← Back to Home
-        </a>
 
 
         <div class="login-form-container">
 
-            <p class="eyebrow">
-                WELCOME BACK
-            </p>
 
-            <h2>
-                Sign in to
-                <span>BB RENTALS</span>
-            </h2>
+            <!-- LOGIN HEADING -->
 
-            <p class="login-description">
-                Enter your details to access your account.
-            </p>
+            <div class="login-heading">
 
+                <p class="welcome-text">CUSTOMER ACCOUNT</p>
 
-            <form action="index.html">
+                <h2>
+                    Customer sign in
+                </h2>
 
-                <div class="form-group">
+                <p>Enter your details to access your customer account.</p>
 
-                    <label for="email">
-                        Email Address
-                    </label>
-
-                    <input
-                        type="email"
-                        id="email"
-                        placeholder="Enter your email"
-                        required
-                    >
-
-                </div>
+            </div>
 
 
-                <div class="form-group">
 
-                    <label for="password">
-                        Password
-                    </label>
+            <!-- LOGIN FORM -->
 
-                    <input
-                        type="password"
-                        id="password"
-                        placeholder="Enter your password"
-                        required
-                    >
+<form onsubmit="loginUser(event)">
 
-                </div>
+    <div class="form-group">
 
+        <label for="login-email">
+            Email Address
+        </label>
 
-                <div class="login-options">
+        <input
+            type="email"
+            id="login-email"
+            name="login-email"
+            placeholder="Enter your email"
+            required
+        >
 
-                    <label class="remember">
-
-                        <input type="checkbox">
-
-                        Remember me
-
-                    </label>
+    </div>
 
 
-                    <a href="#">
-                        Forgot Password?
-                    </a>
+    <div class="form-group">
 
-                </div>
+        <label for="login-password">
+            Password
+        </label>
+
+        <input
+            type="password"
+            id="login-password"
+            name="login-password"
+            placeholder="Enter your password"
+            required
+        >
+
+    </div>
 
 
-                <button type="submit" class="login-submit">
-                    Login →
-                </button>
+    <div class="login-options">
 
-            </form>
+        <label class="remember-me">
+
+            <input
+                type="checkbox"
+                name="remember"
+            >
+
+            <span>
+                Remember me
+            </span>
+
+        </label>
 
 
-            <p class="create-account">
+        <a href="#">
+            Forgot Password?
+        </a>
+
+    </div>
+
+
+    <button
+        type="submit"
+        class="login-button"
+    >
+        Login →
+    </button>
+
+</form>
+
+
+
+            <!-- CREATE ACCOUNT -->
+
+            <p class="create-account-text">
 
                 Don't have an account?
 
-                <a href="#">
+                <a href="create-account.html">
                     Create Account
                 </a>
 
+            </p>
+
+            <p class="create-account-text">
+                Administrator?
+                <a href="admin-login.html">Admin Login</a>
             </p>
 
         </div>
@@ -152,6 +187,8 @@
     </div>
 
 </div>
+<script src="script.js"></script>
 
 </body>
+
 </html>
