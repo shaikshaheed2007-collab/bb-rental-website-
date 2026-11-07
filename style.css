@@ -1831,7 +1831,7 @@ input {
             rgba(0, 0, 0, 0.68),
             rgba(0, 0, 0, 0.80)
         ),
-        url("images/Audi.jpeg");
+        url("/images/Toyota Fortuner.jpeg");
 
     background-size: cover;
 
@@ -2263,7 +2263,7 @@ input {
             rgba(0, 0, 0, 0.68),
             rgba(0, 0, 0, 0.80)
         ),
-        url("images/Audi.jpeg");
+        url("/images/Toyota Fortuner.jpeg");
 
     background-size: cover;
 
@@ -2516,7 +2516,7 @@ input {
             rgba(0, 0, 0, 0.68),
             rgba(0, 0, 0, 0.80)
         ),
-        url("images.jpeg/Audi.jpeg");
+        url("/images/Toyota Fortuner.jpeg");
 
     background-size: cover;
     background-position: center;
@@ -2775,7 +2775,7 @@ input {
             rgba(0, 0, 0, 0.68),
             rgba(0, 0, 0, 0.80)
         ),
-        url("images.jpeg/Audi.jpeg");
+        url("/images/Toyota Fortuner.jpeg");
 
     background-size: cover;
     background-position: center;

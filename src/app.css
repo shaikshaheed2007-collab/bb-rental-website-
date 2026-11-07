@@ -1,0 +1,1024 @@
+:root {
+  font-family: Inter, sans-serif;
+  color: #fff;
+  background: #080808;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+}
+
+body {
+  min-width: 320px;
+}
+
+button,
+input,
+select {
+  font: inherit;
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+a {
+  color: inherit;
+}
+
+.app-header {
+  position: relative;
+  z-index: 3;
+  background: #090909;
+  border-bottom: 1px solid rgba(255, 255, 255, .08);
+}
+
+.app-header-inner {
+  width: min(1250px, 90%);
+  min-height: 82px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 24px;
+}
+
+.app-nav,
+.app-header-actions {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+}
+
+.app-nav a {
+  color: #c3c3c3;
+  font-size: 13px;
+}
+
+.app-nav a:hover,
+.text-link {
+  color: var(--lime);
+}
+
+.header-user {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.primary-button,
+.outline-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 44px;
+  padding: 11px 20px;
+  border: 1px solid var(--lime);
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 700;
+  text-decoration: none;
+  transition: .2s ease;
+}
+
+.primary-button {
+  color: #080808;
+  background: var(--lime);
+}
+
+.primary-button:hover {
+  background: #e6ff66;
+  transform: translateY(-1px);
+}
+
+.outline-button {
+  color: #fff;
+  background: transparent;
+  border-color: rgba(255, 255, 255, .3);
+}
+
+.outline-button:hover {
+  color: #080808;
+  background: var(--lime);
+  border-color: var(--lime);
+}
+
+.compact-button {
+  min-height: 38px;
+  padding: 8px 14px;
+}
+
+.app-hero {
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(0,0,0,.92), rgba(0,0,0,.55), rgba(0,0,0,.2)),
+    url("https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?auto=format&fit=crop&w=2000&q=85") center/cover;
+}
+
+.app-hero-content {
+  width: min(1150px, 90%);
+  margin: auto;
+  padding: 70px 0;
+}
+
+.app-hero h1 {
+  margin: 14px 0 20px;
+  font: 700 clamp(46px, 7vw, 82px)/.99 "Space Grotesk", sans-serif;
+  letter-spacing: -3px;
+}
+
+.app-hero h1 span,
+.section-title h2 span,
+.page-banner h1 span,
+.portal-page h1 span {
+  color: var(--lime);
+}
+
+.app-hero-content > p:not(.eyebrow) {
+  max-width: 520px;
+  color: #ccc;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 12px;
+  margin-top: 28px;
+}
+
+.app-page {
+  width: min(1200px, 90%);
+  margin: 0 auto;
+  padding: 70px 0;
+}
+
+.section-title,
+.panel-heading {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+.section-title h2,
+.panel-heading h2 {
+  font: 700 clamp(30px, 4vw, 42px)/1.1 "Space Grotesk", sans-serif;
+}
+
+.text-link {
+  font-weight: 700;
+}
+
+.car-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+}
+
+.car-card {
+  overflow: hidden;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.car-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(215,255,0,.45);
+}
+
+.car-image {
+  display: block;
+  height: 215px;
+  overflow: hidden;
+  background: #202020;
+}
+
+.car-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform .35s ease;
+}
+
+.car-card:hover .car-image img {
+  transform: scale(1.035);
+}
+
+.car-info {
+  padding: 19px;
+}
+
+.car-category {
+  color: var(--lime);
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+}
+
+.car-info h3 {
+  margin: 6px 0 12px;
+  font: 600 21px "Space Grotesk", sans-serif;
+}
+
+.car-specs,
+.detail-specs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 9px;
+  color: #aaa;
+  font-size: 11px;
+}
+
+.car-bottom {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 20px;
+}
+
+.car-bottom strong {
+  color: var(--lime);
+  white-space: nowrap;
+}
+
+.car-bottom small,
+.details-rate small {
+  color: #aaa;
+  font-size: 11px;
+  font-weight: 400;
+}
+
+.rent-btn {
+  padding: 8px 12px;
+  color: #080808;
+  background: var(--lime);
+  border-radius: 4px;
+  font-size: 11px;
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.feature-strip {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  margin-top: 56px;
+  padding: 24px;
+  background: #121212;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+}
+
+.plans-section {
+  margin-top: 60px;
+}
+
+.plans-grid,
+.company-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 18px;
+}
+
+.plan-card,
+.company-card {
+  display: grid;
+  align-content: start;
+  gap: 14px;
+  padding: 23px;
+  background: #131313;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+}
+
+.plan-card.featured {
+  border-color: rgba(215,255,0,.55);
+}
+
+.plan-card h3,
+.company-card h2 {
+  font: 700 23px "Space Grotesk", sans-serif;
+}
+
+.plan-card > p:not(.eyebrow),
+.company-card > p:not(.eyebrow) {
+  color: #aaa;
+  font-size: 13px;
+}
+
+.plan-card .eyebrow {
+  margin-bottom: -7px;
+}
+
+.plan-price {
+  color: var(--lime) !important;
+  font: 700 27px "Space Grotesk", sans-serif;
+  white-space: nowrap;
+}
+
+.plan-price small {
+  color: #aaa;
+  font: 400 12px Inter, sans-serif;
+}
+
+.company-card .primary-button {
+  justify-self: start;
+}
+
+.subscription-panel {
+  padding-bottom: 15px;
+}
+
+.subscription-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 18px;
+  padding: 18px 20px 4px;
+}
+
+.subscription-actions > div:first-child {
+  display: grid;
+  gap: 5px;
+  color: #999;
+  font-size: 12px;
+}
+
+.subscription-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.subscription-panel > .fine-print {
+  padding: 0 20px;
+}
+
+.feature-strip div {
+  display: grid;
+  gap: 4px;
+}
+
+.feature-strip strong {
+  color: var(--lime);
+  font: 700 22px "Space Grotesk", sans-serif;
+}
+
+.feature-strip span,
+.muted {
+  color: #999;
+}
+
+.app-footer {
+  display: grid;
+  justify-items: center;
+  gap: 8px;
+  padding: 36px 5%;
+  text-align: center;
+  background: #101010;
+  border-top: 1px solid rgba(255,255,255,.08);
+}
+
+.app-footer p,
+.app-footer small {
+  color: #999;
+}
+
+.page-banner {
+  padding: 75px 5% 55px;
+  text-align: center;
+  background: radial-gradient(ellipse at top, #252525, #080808 70%);
+}
+
+.page-banner h1 {
+  margin: 10px 0;
+  font: 700 clamp(38px, 6vw, 60px) "Space Grotesk", sans-serif;
+}
+
+.page-banner > p:last-child {
+  color: #aaa;
+}
+
+.location-notice,
+.notice-message {
+  margin-bottom: 24px;
+  padding: 14px 17px;
+  color: #ddd;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 6px;
+}
+
+.about-copy {
+  max-width: 850px;
+  min-height: 360px;
+}
+
+.about-copy h2 {
+  margin-bottom: 15px;
+  font: 700 32px "Space Grotesk", sans-serif;
+}
+
+.about-copy p {
+  max-width: 700px;
+  margin-bottom: 24px;
+  color: #aaa;
+}
+
+.details-page {
+  padding-top: 45px;
+}
+
+.details-layout {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 38px;
+  margin-top: 20px;
+}
+
+.details-photo {
+  display: grid;
+  gap: 12px;
+}
+
+.details-photo img {
+  width: 100%;
+  max-height: 410px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.details-photo img + img {
+  max-height: 190px;
+}
+
+.details-panel {
+  align-self: center;
+  display: grid;
+  justify-items: start;
+  gap: 16px;
+  padding: 10px;
+}
+
+.details-panel h1 {
+  font: 700 clamp(32px, 5vw, 48px) "Space Grotesk", sans-serif;
+}
+
+.details-panel > p:not(.eyebrow) {
+  color: #bbb;
+}
+
+.details-rate {
+  color: var(--lime);
+  font: 700 28px "Space Grotesk", sans-serif;
+}
+
+.detail-specs span {
+  padding: 7px 10px;
+  background: #1b1b1b;
+  border-radius: 4px;
+}
+
+.modal-backdrop {
+  position: fixed;
+  z-index: 20;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  overflow-y: auto;
+  padding: 20px;
+  background: rgba(0,0,0,.82);
+}
+
+.booking-modal {
+  position: relative;
+  width: min(540px, 100%);
+  max-height: calc(100vh - 40px);
+  overflow-y: auto;
+  padding: 28px;
+  background: #151515;
+  border: 1px solid rgba(255,255,255,.16);
+  border-radius: 10px;
+}
+
+.booking-modal h2 {
+  margin-bottom: 15px;
+  font: 700 27px "Space Grotesk", sans-serif;
+}
+
+.modal-close {
+  position: absolute;
+  top: 12px;
+  right: 16px;
+  color: #aaa;
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font-size: 26px;
+}
+
+.text-lime {
+  margin: 4px 0 18px;
+  color: var(--lime);
+}
+
+.form-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.booking-modal label,
+.app-form label,
+.report-controls label {
+  display: grid;
+  gap: 7px;
+  color: #bcbcbc;
+  font-size: 12px;
+}
+
+.booking-modal input,
+.booking-modal select,
+.app-form input,
+.report-controls input {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #222;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  color-scheme: dark;
+}
+
+.total-line {
+  display: grid;
+  gap: 4px;
+  margin: 17px 0;
+  color: #aaa;
+}
+
+.total-line strong {
+  color: var(--lime);
+  font-size: 17px;
+}
+
+.payment-choice {
+  display: grid;
+  gap: 12px;
+  padding: 15px;
+  border: 1px solid rgba(255,255,255,.12);
+  border-radius: 6px;
+}
+
+.payment-choice legend {
+  padding: 0 6px;
+  color: var(--lime);
+  font-weight: 700;
+}
+
+.payment-choice small {
+  color: #999;
+}
+
+.modal-actions {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 18px;
+}
+
+.auth-page {
+  min-height: 100vh;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.auth-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  padding: 35px 9%;
+  background: linear-gradient(130deg, rgba(0,0,0,.8), rgba(0,0,0,.95)), url("/images/Toyota Fortuner.jpeg") center/cover;
+}
+
+.auth-side > div {
+  max-width: 500px;
+  margin: auto 0;
+}
+
+.auth-side h1 {
+  margin: 10px 0 18px;
+  font: 700 clamp(38px, 5vw, 58px)/1.05 "Space Grotesk", sans-serif;
+}
+
+.auth-side p:last-child {
+  color: #bbb;
+}
+
+.auth-back {
+  position: absolute;
+  top: 112px;
+  color: #ccc;
+  font-size: 13px;
+}
+
+.auth-content {
+  display: grid;
+  place-items: center;
+  padding: 35px;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+}
+
+.auth-card h2 {
+  margin: 8px 0;
+  font: 700 32px "Space Grotesk", sans-serif;
+}
+
+.app-form {
+  display: grid;
+  gap: 15px;
+  margin-top: 23px;
+}
+
+.full-button {
+  width: 100%;
+}
+
+.auth-switch {
+  margin-top: 18px;
+  color: #aaa;
+  font-size: 13px;
+}
+
+.auth-switch a {
+  color: var(--lime);
+}
+
+.form-message {
+  font-size: 13px;
+}
+
+.app-alert {
+  padding: 13px 5%;
+  color: #ffd18a;
+  background: #2a2115;
+  border-bottom: 1px solid rgba(255, 209, 138, .2);
+  font-size: 13px;
+  text-align: center;
+}
+
+.inline-button {
+  margin-left: 8px;
+  padding: 0;
+  color: var(--lime);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.primary-button:disabled,
+.outline-button:disabled {
+  cursor: wait;
+  opacity: .65;
+  transform: none;
+}
+
+.error-message {
+  color: #ff9a9a;
+}
+
+.success-message {
+  color: var(--lime);
+}
+
+.portal-page {
+  min-height: calc(100vh - 230px);
+  padding-top: 55px;
+}
+
+.portal-page > h1 {
+  margin: 7px 0;
+  font: 700 clamp(36px, 5vw, 52px) "Space Grotesk", sans-serif;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 15px;
+  margin: 24px 0;
+}
+
+.stat-card,
+.panel {
+  background: #131313;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 8px;
+}
+
+.stat-card {
+  padding: 18px 20px;
+}
+
+.stat-card span {
+  display: block;
+  color: #999;
+  font-size: 11px;
+  letter-spacing: .6px;
+  text-transform: uppercase;
+}
+
+.stat-card strong {
+  display: block;
+  margin-top: 7px;
+  color: var(--lime);
+  font: 700 25px "Space Grotesk", sans-serif;
+}
+
+.panel {
+  overflow: hidden;
+  margin-top: 20px;
+}
+
+.panel-heading {
+  margin: 0;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.panel-heading h2 {
+  font-size: 21px;
+}
+
+.vehicle-form {
+  display: grid;
+  gap: 14px;
+  padding: 18px 20px;
+  border-bottom: 1px solid rgba(255,255,255,.08);
+}
+
+.vehicle-form h3 {
+  font: 600 16px "Space Grotesk", sans-serif;
+}
+
+.vehicle-form label {
+  display: grid;
+  gap: 7px;
+  color: #bcbcbc;
+  font-size: 12px;
+}
+
+.vehicle-form input,
+.vehicle-form select {
+  width: 100%;
+  min-height: 42px;
+  padding: 10px 12px;
+  color: #fff;
+  background: #222;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  color-scheme: dark;
+}
+
+.table-scroll {
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  white-space: nowrap;
+}
+
+th,
+td {
+  padding: 14px 17px;
+  border-bottom: 1px solid rgba(255,255,255,.07);
+  font-size: 12px;
+}
+
+th {
+  color: #888;
+  font-size: 10px;
+  letter-spacing: .8px;
+  text-transform: uppercase;
+}
+
+td {
+  color: #ddd;
+}
+
+.cell-subtitle {
+  display: block;
+  margin-top: 3px;
+  color: #888;
+}
+
+.status-pill {
+  padding: 5px 9px;
+  border-radius: 20px;
+  font-size: 10px;
+  text-transform: capitalize;
+}
+
+.status-pill.pending {
+  color: #ffd18a;
+  background: #3a2a12;
+}
+
+.status-pill.paid {
+  color: #d7ff00;
+  background: #263000;
+}
+
+.status-pill.cancelled {
+  color: #ffb0b0;
+  background: #3a1717;
+}
+
+.status-button {
+  padding: 7px 10px;
+  color: #ffd18a;
+  background: #3a2a12;
+  border: 1px solid rgba(255, 209, 138, .18);
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 11px;
+  white-space: nowrap;
+}
+
+.status-button.paid {
+  color: var(--lime);
+  background: #263000;
+  border-color: rgba(215, 255, 0, .2);
+}
+
+.status-button:disabled {
+  cursor: wait;
+  opacity: .65;
+}
+
+.table-input {
+  min-width: 115px;
+  min-height: 36px;
+  padding: 7px 9px;
+  color: #fff;
+  background: #222;
+  border: 1px solid #383838;
+  border-radius: 4px;
+  color-scheme: dark;
+}
+
+.empty-state {
+  padding: 28px 20px;
+  color: #999;
+  text-align: center;
+}
+
+.fine-print {
+  margin-top: 14px;
+  color: #858585;
+  font-size: 11px;
+}
+
+.report-controls {
+  display: flex;
+  align-items: end;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  padding: 17px 20px;
+  background: #131313;
+  border: 1px solid rgba(255,255,255,.1);
+  border-radius: 7px;
+}
+
+.report-controls label {
+  width: min(280px, 100%);
+}
+
+.report-controls p {
+  color: #888;
+  font-size: 12px;
+}
+
+.compact-stats {
+  margin: 15px;
+}
+
+@media (max-width: 900px) {
+  .car-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .plans-grid,
+  .company-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .app-header-inner {
+    flex-wrap: wrap;
+    padding: 16px 0;
+  }
+
+  .app-nav {
+    order: 3;
+    width: 100%;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+
+@media (max-width: 650px) {
+  .app-header-inner {
+    width: 92%;
+    gap: 12px;
+  }
+
+  .app-header-actions {
+    gap: 8px;
+  }
+
+  .app-nav {
+    gap: 14px;
+  }
+
+  .app-nav a {
+    font-size: 11px;
+  }
+
+  .car-grid,
+  .plans-grid,
+  .company-grid,
+  .details-layout,
+  .feature-strip,
+  .stats-grid,
+  .auth-page {
+    grid-template-columns: 1fr;
+  }
+
+  .feature-strip {
+    gap: 20px;
+  }
+
+  .app-hero {
+    min-height: 470px;
+  }
+
+  .app-page {
+    width: 92%;
+    padding: 45px 0;
+  }
+
+  .section-title,
+  .panel-heading {
+    align-items: flex-start;
+  }
+
+  .auth-side {
+    min-height: 280px;
+    padding: 24px 6%;
+  }
+
+  .auth-side > div {
+    margin: 68px 0 12px;
+  }
+
+  .auth-side h1 {
+    font-size: 35px;
+  }
+
+  .auth-back {
+    top: 76px;
+  }
+
+  .auth-content {
+    padding: 40px 22px;
+  }
+
+  .form-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .report-controls {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+
+  .subscription-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+}
